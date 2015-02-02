@@ -1,6 +1,6 @@
 {
     "name": "yasel",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "description": "Yasel (Yasnippet Expand License) outputs commented license snippets for use with Emacs and Yasnippet from a directory of snippet templates.",
     "main": "index.js",
     "scripts": {
@@ -14,10 +14,19 @@
         "Emacs",
         "Yasnippet"
     ],
+    "bin": {
+        "yasel": "./index.js"
+    },
     "author": "Mattias Bengtsson",
     "license": "GPLv3+",
     "bugs": {
         "url": "https://github.com/moonlite/yasel/issues"
     },
-    "homepage": "https://github.com/moonlite/yasel"
+    "homepage": "https://github.com/moonlite/yasel",
+    "dependencies": {
+        "fquery": "^0.16.2",
+        "fquery-comment": "^0.1.0",
+        "mkdirp": "^0.5.0",
+        "nomnom": "^1.8.1"
+    }
 }

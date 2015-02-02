@@ -1,0 +1,29 @@
+{
+    "src": {
+        "position": 0,
+        "required": "true",
+        "help": "Path to the license template directory",
+        "metavar": "DIR",
+        "type": "string"
+    },
+    "dest": {
+        "position": 1,
+        "required": "true",
+        "help": "Path to your snippets directory",
+        "metavar": "DIR",
+        "type": "string"
+    },
+    "modes-config": {
+        "abbr": "c",
+        "required": "true",
+        "default": "./.yasel.json",
+        "help": "Path to modes config.",
+        "metavar": "FILE",
+        "type": "string"
+    },
+    "help": {
+        "abbr": "h",
+        "help": "Show this help.",
+        "flag": "true"
+    }
+}
