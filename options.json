@@ -21,6 +21,13 @@
         "metavar": "FILE",
         "type": "string"
     },
+    "key-binding": {
+        "abbr": "k",
+        "required": "false",
+        "default": "",
+        "help": "The keybinding for inserting a license snippet.",
+        "type": "string"
+    },
     "help": {
         "abbr": "h",
         "help": "Show this help.",

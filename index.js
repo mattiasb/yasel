@@ -35,8 +35,9 @@ var modes = loadConfig(opts['modes-config']);
 for (var mode in modes) {
     var modeOpts = modes[mode];
     compileTemplates(opts.src,
-                     modeOpts,
-                     path.join(opts.dest, mode));
+                     path.join(opts.dest, mode),
+                     opts['key-binding'],
+                     modeOpts);
 }
 
 ///////////////
@@ -66,14 +67,13 @@ function printConfig() {
 }
 
 // Compile all templates in SRC and move it to DEST
-function compileTemplates(src, compileOptions, dest) {
+function compileTemplates(src, dest, binding, { pre, body, post }) {
     $(path.join(src, "*"))
-        .comment(compileOptions.pre,
-                 compileOptions.body,
-                 compileOptions.post)
+        .comment(pre, body, post)
         .wrap(["# -*- mode: snippet -*-",
                "# group: Licenses",
                "# key: license",
+               (binding && binding !== "") ? "# binding: " + binding : "",
                "# --",
                ""].join('\n'))
         .write(function(blob) {

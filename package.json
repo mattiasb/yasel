@@ -1,6 +1,6 @@
 {
     "name": "yasel",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Yasel (Yasnippet Expand License) outputs commented license snippets for use with Emacs and Yasnippet from a directory of snippet templates.",
     "main": "index.js",
     "scripts": {
