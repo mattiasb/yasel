@@ -73,6 +73,7 @@ function compileTemplates(src, compileOptions, dest) {
                  compileOptions.post)
         .wrap(["# -*- mode: snippet -*-",
                "# group: Licenses",
+               "# key: license",
                "# --",
                ""].join('\n'))
         .write(function(blob) {
